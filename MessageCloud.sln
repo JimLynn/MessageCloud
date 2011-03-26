@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageCloud", "MessageCloud\MessageCloud.csproj", "{2BD8C31C-98EB-4593-9786-7801E3C26112}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5C4E447F-7B7D-494B-8B44-A6DFC4715A25} = {5C4E447F-7B7D-494B-8B44-A6DFC4715A25}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageCloud.Web", "MessageCloud.Web\MessageCloud.Web.csproj", "{5C4E447F-7B7D-494B-8B44-A6DFC4715A25}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{536AAA55-366E-49BC-B818-9EA2EB324E15}"
+	ProjectSection(SolutionItems) = preProject
+		Performance1.psess = Performance1.psess
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniTwitter", "MiniTwitter\MiniTwitter.csproj", "{DE42E057-EE4A-4F30-A444-1A4006BE2227}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2BD8C31C-98EB-4593-9786-7801E3C26112}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BD8C31C-98EB-4593-9786-7801E3C26112}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BD8C31C-98EB-4593-9786-7801E3C26112}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BD8C31C-98EB-4593-9786-7801E3C26112}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C4E447F-7B7D-494B-8B44-A6DFC4715A25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C4E447F-7B7D-494B-8B44-A6DFC4715A25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C4E447F-7B7D-494B-8B44-A6DFC4715A25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C4E447F-7B7D-494B-8B44-A6DFC4715A25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE42E057-EE4A-4F30-A444-1A4006BE2227}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE42E057-EE4A-4F30-A444-1A4006BE2227}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE42E057-EE4A-4F30-A444-1A4006BE2227}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE42E057-EE4A-4F30-A444-1A4006BE2227}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

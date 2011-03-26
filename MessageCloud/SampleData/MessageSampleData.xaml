@@ -1,0 +1,5 @@
+<MessageCloud:Message xmlns:MessageCloud="clr-namespace:MessageCloud" xmlns="http://schemas.microsoft.com/client/2007" Z="645.27" Text="Aenean mauris curabitur vestibulum">
+	<MessageCloud:Message.Location>
+		<Point X="295.07" Y="535.34"/>
+	</MessageCloud:Message.Location>
+</MessageCloud:Message>

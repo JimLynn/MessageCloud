@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="83eb7bc3-126d-4c05-8c52-3ebec459731e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:2726/Twitter.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Twitter.disco" MetadataType="Disco" ID="591f9ee9-8567-424a-ab55-f5f952d724ef" SourceId="1" SourceUrl="http://localhost:2726/Twitter.svc?disco" />
+    <MetadataFile FileName="Twitter.xsd" MetadataType="Schema" ID="96a9d418-4f84-4a08-9617-c5932c918722" SourceId="1" SourceUrl="http://localhost:2726/Twitter.svc?xsd=xsd0" />
+    <MetadataFile FileName="Twitter.wsdl" MetadataType="Wsdl" ID="5c013cf2-da6b-4d0a-8787-b00b4aebf2ff" SourceId="1" SourceUrl="http://localhost:2726/Twitter.svc?wsdl" />
+    <MetadataFile FileName="Twitter1.xsd" MetadataType="Schema" ID="1f3b5d75-2222-4581-9eee-12ff6a7d57e0" SourceId="1" SourceUrl="http://localhost:2726/Twitter.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

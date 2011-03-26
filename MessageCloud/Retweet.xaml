@@ -1,0 +1,110 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing"
+	xmlns:System="clr-namespace:System;assembly=mscorlib"
+	mc:Ignorable="d"
+	x:Class="MessageCloud.Retweet"
+	d:DesignWidth="310" d:DesignHeight="24">
+
+	<Grid x:Name="LayoutRoot" Background="Transparent">
+		<VisualStateManager.VisualStateGroups>
+			<VisualStateGroup x:Name="RetweetStates">
+				<VisualStateGroup.Transitions>
+					<VisualTransition GeneratedDuration="0:0:0.2">
+						<VisualTransition.GeneratedEasingFunction>
+							<CubicEase EasingMode="EaseIn"/>
+						</VisualTransition.GeneratedEasingFunction>
+					</VisualTransition>
+				</VisualStateGroup.Transitions>
+				<VisualState x:Name="Normal">
+					<Storyboard>
+						<DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="yesno" d:IsOptimized="True"/>
+						<DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="retweetedbyyou" d:IsOptimized="True"/>
+						<DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="retweeting" d:IsOptimized="True"/>
+					</Storyboard>
+				</VisualState>
+				<VisualState x:Name="Retweeting">
+					<Storyboard RepeatBehavior="Forever">
+						<DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="retweetedbyyou" d:IsOptimized="True"/>
+						<DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="yesno" d:IsOptimized="True"/>
+						<DoubleAnimation Duration="0" To="33" Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="retweeting" d:IsOptimized="True"/>
+						<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="grid">
+							<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+							<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="360"/>
+						</DoubleAnimationUsingKeyFrames>
+					</Storyboard>
+				</VisualState>
+				<VisualState x:Name="Retweeted">
+					<Storyboard>
+						<DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="yesno" d:IsOptimized="True"/>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="textBlock">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<Thickness>3,3,0,3</Thickness>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+						<DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="retweeting" d:IsOptimized="True"/>
+						<DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock1" d:IsOptimized="True"/>
+						<DoubleAnimation Duration="0" To="98" Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="retweetedbyyou" d:IsOptimized="True"/>
+					</Storyboard>
+				</VisualState>
+				<VisualState x:Name="Prompt">
+					<Storyboard>
+						<DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="retweetedbyyou" d:IsOptimized="True"/>
+						<DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="retweeting" d:IsOptimized="True"/>
+					</Storyboard>
+				</VisualState>
+				<VisualState x:Name="Undoing">
+					<Storyboard>
+						<DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="yesno" d:IsOptimized="True"/>
+						<DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="retweeting" d:IsOptimized="True"/>
+						<DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="hyperlinkButton" d:IsOptimized="True"/>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.IsHitTestVisible)" Storyboard.TargetName="hyperlinkButton">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<System:Boolean>False</System:Boolean>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+					</Storyboard>
+				</VisualState>
+			</VisualStateGroup>
+		</VisualStateManager.VisualStateGroups>
+		<StackPanel/>
+		<StackPanel Orientation="Horizontal" d:LayoutOverrides="Width, Height">
+			<Border BorderThickness="2" BorderBrush="#FFC00000" CornerRadius="3" Width="22" Height="22" Background="#FFFFCCCC">
+				<Grid x:Name="grid" Margin="2" RenderTransformOrigin="0.5,0.5" MouseLeftButtonUp="RT_Click">
+					<Grid.RenderTransform>
+						<CompositeTransform/>
+					</Grid.RenderTransform>
+					<ed:LineArrow Fill="#FFF4F4F5" Stroke="Black" StrokeThickness="3" BendAmount="1" ArrowSize="3" Margin="4,0,0,4"/>
+					<ed:LineArrow Fill="#FFF4F4F5" Stroke="Black" StrokeThickness="3" BendAmount="1" ArrowSize="3" Margin="0,4,4,0" StartCorner="BottomRight"/>
+				</Grid>
+			</Border>
+			<TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="Retweet" VerticalAlignment="Center" Margin="3,3,0,3" Cursor="Hand" MouseLeftButtonUp="textBlock_MouseLeftButtonUp" />
+			<Grid x:Name="yesno" Width="60">
+				<StackPanel HorizontalAlignment="Left" Margin="0" Orientation="Horizontal" d:LayoutOverrides="Height">
+					<TextBlock HorizontalAlignment="Left" Margin="0" TextWrapping="Wrap" Text="?" VerticalAlignment="Center"/>
+					<HyperlinkButton Content="Yes" VerticalAlignment="Center" Margin="2,0,0,0" Click="DoRetweet_Click" />
+					<HyperlinkButton Content="No" VerticalAlignment="Center" Margin="2,0,0,0" Click="CancelRetweet_Click" />
+				</StackPanel>
+			</Grid>
+			<Grid x:Name="retweetedbyyou" Width="124">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="58"/>
+					<ColumnDefinition/>
+				</Grid.ColumnDefinitions>
+				<TextBlock Margin="0" Text="ed by you" d:LayoutOverrides="Width" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+				<TextBlock x:Name="textBlock1" Grid.Column="1" Margin="8,0,0,0" Text="Undoing..." VerticalAlignment="Center" d:LayoutOverrides="Width" HorizontalAlignment="Left"/>
+				<HyperlinkButton x:Name="hyperlinkButton" Content="Undo" Grid.Column="1" Margin="4,0,0,0" d:LayoutOverrides="Width, Height" VerticalAlignment="Center" HorizontalAlignment="Left" Click="UndoRetweet_Click" />
+			</Grid>
+			<Grid x:Name="retweeting" Width="33">
+				<TextBlock Margin="0" Text="ing..." d:LayoutOverrides="Width, Height" VerticalAlignment="Center"/>
+			</Grid>
+		</StackPanel>
+	</Grid>
+</UserControl>

@@ -1,0 +1,15 @@
+<MessageCloud:SampleData xmlns:MessageCloud="clr-namespace:MessageCloud" xmlns:System="clr-namespace:System;assembly=mscorlib">
+	<MessageCloud:SampleData.TwitterMessage>
+		<MessageCloud:TwitterMessage CreatedAt="05/03/2010 19:59:19" IsRetweet="True" InReplyToScreenName="bengoldacre" Text="This is a piece of text">
+			<MessageCloud:TwitterMessage.Id>
+                <System:Int64>123</System:Int64>
+            </MessageCloud:TwitterMessage.Id>
+			<MessageCloud:TwitterMessage.RetweetUser>
+                <MessageCloud:TwitterUser Description="Social Media Consultant" FollowersCount="50" Location="Cambridge" Name="Fred Bloggs" ScreenName="fredbloggs" UserID="75" ProfileImageUrl="http://a1.twimg.com/profile_images/74621100/Picture0002_normal.jpg"/>
+			</MessageCloud:TwitterMessage.RetweetUser>
+			<MessageCloud:TwitterMessage.User>
+                <MessageCloud:TwitterUser Description="It's me" FollowersCount="74" Location="London" Name="John Smith" ScreenName="johnsmith" UserID="89" ProfileImageUrl="http://a1.twimg.com/profile_images/74621100/Picture0002_normal.jpg"/>
+			</MessageCloud:TwitterMessage.User>
+		</MessageCloud:TwitterMessage>
+	</MessageCloud:SampleData.TwitterMessage>
+</MessageCloud:SampleData>
